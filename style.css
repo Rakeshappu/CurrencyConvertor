@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+}
+
+.container{
+  background-color: rgb(248, 238, 219);
+  border-radius: 2rem;
+  width: 550px;
+  height: 510px;
+  padding: 2rem;
+  
+}
+
+.container h1{
+    text-align: center;
+    font-family: math;
+    font-weight: 1000;
+    font-size: xxx-large;
+
+}
+.container p{
+    text-align:left;
+    font-family: math;
+    font-weight: 800;
+    font-size: 28px;
+    padding: 1rem;
+}
+
+form{
+    margin: 2rem 0 0rem 0;
+    
+}
+
+form select,button,input{
+    width: 40%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    font-family: math;
+    font-weight: 700;
+    font-size: x-large;
+    display: flex;
+}
+form button{
+    width: 50%;
+    height: 70px;
+    border: none;
+    text-align: center;
+    line-height: 70px;
+    outline: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(150px,20px);
+    background-color: #fff3bf;
+    border: #000000 2px solid;
+}
+.amount{
+    display: flex;
+    gap: 6.5rem;
+    align-items: center;
+}
+.select-container{
+    display: flex;
+    gap: 14rem;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 70px;
+    height: 70px;
+    transform: translate(50px,-10px);
+   
+}
+input,select{
+    text-align: center;
+}
