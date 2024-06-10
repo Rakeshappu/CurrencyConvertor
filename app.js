@@ -1,5 +1,3 @@
-const BASE_URL =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
   const countryList = {
     AED: "AE",
     AFN: "AF",
@@ -161,6 +159,10 @@ const BASE_URL =
     ZMK: "ZM",
     ZWD: "ZW",
   };
+
+  const BASE_URL =
+  "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
+
 const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
 const fromCurr = document.querySelector(".from select");
@@ -192,11 +194,14 @@ const updateExchangeRate = async () => {
     amtVal = 1;
     amount.value = "1";
   }
-  const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
+  const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
   let response = await fetch(URL);
   let data = await response.json();
-  let rate = data[toCurr.value.toLowerCase()];
-
+  let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+  console.log(fromCurr.value);
+  console.log(toCurr.value);
+  console.log(data);
+  console.log(rate);
   let finalAmount = amtVal * rate;
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 };
